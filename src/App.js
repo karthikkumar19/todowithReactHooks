@@ -3,6 +3,7 @@ import Header from './compoenents/Header';
 import Auth from './compoenents/Auth';
 import Todo from './compoenents/Todo';
 import AuthContext from './auth-context';
+import Mychart from './charts/mychart';
 
 function App() {
 
@@ -19,15 +20,15 @@ function App() {
 
   return (
     <div >
-      <AuthContext.Provider value={{status: authStatus, login: login}}>
+      {/* <AuthContext.Provider value={{status: authStatus, login: login}}>
       <Header onLoadTodos={switchPage.bind(this,'todos')}
        onLoadAuth={switchPage.bind(this, 'auth')}/>
       <hr/>
       {
         page === 'auth' ? <Auth/> : <Todo/> 
       }
-      </AuthContext.Provider>
-      
+      </AuthContext.Provider> */}
+      <Mychart/>
     
     </div>
   );
